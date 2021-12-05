@@ -1,5 +1,8 @@
 require('reflect-metadata');
-const express = require('express')
+const express = require('express');
+const { dbConnection } = require('./database');
+
+dbConnection();
 const app = express()
 const port = 3000
 
