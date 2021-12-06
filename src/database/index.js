@@ -17,11 +17,11 @@ const db_props = {
 const dbConnection = (connection_props = db_props) => {
   try {
     createConnection(connection_props)
-        .then(connection => console.log('Connection: ', connection))
+        .then(connection => console.log('Connection: ', connection.options))
         .catch(error => console.log('DB ERROR: ', error))
   } catch (error) {
     console.log("Db connection error: ", error);
   }
 };
 
-module.exports = { dbConnection };
+module.exports = { dbConnection, db_props };
